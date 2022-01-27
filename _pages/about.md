@@ -14,7 +14,7 @@ About Me
 * But I'm not just achieving something in my major, I am also familiar with Ancient Chinese Literature, Philosophy of Mind, Marxist Philosophy and Economics, which helps me think deeper into my research.
 * Now I am under the supervision of [Prof. Xuening Zhu](https://xueningzhu.github.io) in School of Data Science, Fudan University. We are currently working on Sparse Covariance Regression.
 
-My Friends
+My Friends' Sites
 ======
 * [Lesi Chen](https://truenobility303.github.io)   
 * [YiFan Hu](https://huyifan2001.github.io)
