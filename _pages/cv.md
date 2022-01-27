@@ -32,6 +32,7 @@ Skills
   * Mathematical Analysis
   * Linear Algebra
   * Probability theory
+  * Optimization theory
 * Programming language
   * Python (Especially [Pytorch](https://pytorch.org))
   * R
