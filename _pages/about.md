@@ -9,6 +9,7 @@ redirect_from:
 ---
 About Me
 ======
-* I am currently a undergraduate student in School of Data Science, Fudan University. My research interest lies in High-dimensional Data Modeling, Theoretical Machine Learning and Stochastic Optimization.
-
+* I am currently a undergraduate student in School of Data Science, Fudan University. 
+* My research interest lies in High-dimensional Data Modeling, Theoretical Machine Learning and Stochastic Optimization.
+* But I'm not just achieving something in my major, I am also familiar with Ancient Chinese Literature, Philosophy of Mind, Marxist Philosophy and Economics, which helps me think deeper into my research.
 * Now I am under the supervision of [Prof. Xuening Zhu](https://xueningzhu.github.io) in School of Data Science, Fudan University. We are currently working on Sparse Covariance Regression.
