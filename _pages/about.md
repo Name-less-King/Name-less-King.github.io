@@ -16,7 +16,7 @@ Research Interests
 * Stochastic Optimization
 * Operation Research
 
-Spare time interests
+Spare Time Interests
 ======
 * Ancient Chinese Literature
 * Marxist Philosophy
