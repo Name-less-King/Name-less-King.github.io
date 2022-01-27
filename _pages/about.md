@@ -1,18 +1,27 @@
 ---
 permalink: /
-title: "Welcome to Eason Liang's Homepage"
+title: "About Me"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
-About Me
+I am currently a undergraduate student in [School of Data Science](http://www.sdspeople.fudan.edu.cn), Fudan University. Now I am under the supervision of [Prof. Xuening Zhu](https://xueningzhu.github.io). We are currently working on Sparse Covariance Regression. My research interest lies in High-dimensional Statistics and Machine Learning.
+
+Research Interests
 ======
-* I am currently a undergraduate student in [School of Data Science](http://www.sdspeople.fudan.edu.cn), [Fudan University](https://www.fudan.edu.cn/). 
-* My research interest lies in High-dimensional Data Modeling, Theoretical Machine Learning and Stochastic Optimization.
-* But I'm not just achieving something in my major, I am also familiar with Ancient Chinese Literature, Philosophy of Mind, Marxist Philosophy and Economics, which helps me think deeper into my research.
-* Now I am under the supervision of [Prof. Xuening Zhu](https://xueningzhu.github.io) in School of Data Science, Fudan University. We are currently working on Sparse Covariance Regression.
+* High-dimensional Data Modeling
+* Theoretical Machine Learning 
+* Stochastic Optimization
+* Operation Research
+
+Spare time interests
+======
+* Ancient Chinese Literature
+* Marxist Philosophy
+* Philosophy of Mind
+* Economics
 
 My Friends' Sites
 ======
