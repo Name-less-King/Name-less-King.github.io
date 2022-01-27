@@ -44,4 +44,5 @@ Skills
   * Functional data analysis
   * Extreme value theory
   * Theoretical machine learning
+  * Neural network and deep learning
 
