@@ -15,7 +15,6 @@ Research Interests
 ======
 * High-dimensional Data Modeling
 * Theoretical Machine Learning 
-* Stochastic Optimization
 * Operational Research
 
 Spare Time Interests
