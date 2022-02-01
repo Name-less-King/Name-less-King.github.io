@@ -23,9 +23,3 @@ Spare Time Interests
 * Marxist Philosophy
 * Philosophy of Mind
 * Economics
-
-My Friends' Sites
-======
-* [Lesi Chen](https://truenobility303.github.io)   
-* [YiFan Hu](https://huyifan2001.github.io)
-* [Haodong Ling](https://milanmarks.github.io)
