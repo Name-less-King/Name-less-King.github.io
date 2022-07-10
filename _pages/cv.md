@@ -29,20 +29,10 @@ Work experience
 Skills
 ======
 * Strong mathematical foundation
-  * Mathematical Analysis
-  * Linear Algebra
-  * Probability theory
-  * Optimization theory
+  * Probability & Statistics
+  * Optimization & Computation
 * Programming language
   * Python (Especially [Pytorch](https://pytorch.org))
   * R
-  * Matlab
-  * LaTex
-* Extensive exposure to statistics topics
-  * High-dimensional data analysis
-  * Survival analysis
-  * Functional data analysis
-  * Extreme value theory
-  * Theoretical machine learning
-  * Neural network and deep learning
+  * MATLAB
 
