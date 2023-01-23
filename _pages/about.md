@@ -16,6 +16,6 @@ I am currently an undergraduate student in [School of Data Science](http://www.s
 
 Research Interests
 ======
-* Financial Engineering
 * Simulation Optimization
+* Reinforcement Learning
 
