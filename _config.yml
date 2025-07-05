@@ -7,10 +7,10 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : Eason Liang
+title                    : Zhiyang Liang
 title_separator          : "-"
-name                     : &name "Eason Liang"
-description              : &description "Undergraduate in School of Data Science, Fudan University"
+name                     : &name "Zhiyang Liang"
+description              : &description "School of Data Science, Fudan University"
 url                      : https://name-less-king.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "Name-less-King.github.io"
