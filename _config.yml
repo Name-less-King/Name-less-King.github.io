@@ -80,14 +80,14 @@ analytics:
 
 # Site Author
 author:
-  name             : "Eason Liang"
+  name             : "Zhiyang Liang"
   avatar           : "profile.png"
-  bio              : "Undergraduate in School of Data Science, Fudan University"
+  bio              : "School of Data Science, Fudan University"
   location         : "Shanghai, China"
   employer         :
   pubmed           : 
-  googlescholar    : 
-  email            : "19307130184@fudan.edu.cn"
+  googlescholar    : "https://scholar.google.com/citations?user=t02BzFYAAAAJ&hl=en&authuser=1"
+  email            : "23110980010@m.fudan.edu.cn"
   researchgate     :  
   uri              :
   bitbucket        :
