@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Welcome to Zhiyang Liang's Homepage!"
+title: ""
 excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -16,6 +16,7 @@ I am currently a third-year Ph.D. student in [School of Data Science](http://www
 
 Research Interests
 ======
+For research, I am broadly interested in using probabilistic and statistical tools to solve practical problems. Several directions that I feel excited about include
+* Uncertainty Quantification (e.g. Conformal Prediction)
 * Generative Modeling
-* Conformal Prediction
-
+* Risk Management
