@@ -12,6 +12,7 @@ About Me
 I am currently a third-year Ph.D. student in [School of Data Science](http://www.sdspeople.fudan.edu.cn), Fudan University. Now I am under the supervision of 
 [Prof. L. Jeff Hong](https://scholar.google.com.sg/citations?user=stZYMd8AAAAJ&hl=en) and I collaborate closely with [Prof. Jiaye Teng](https://www.tengjiaye.com).
 
+n my free time, I enjoy playing video games and listening to Rock, R&B, and Soul music. I am a huge fan of [David Tao](https://www.instagram.com/davidztao/) and the band [Wang Wen](https://www.instagram.com/wangwen_band/).
 
 
 Research Interests
