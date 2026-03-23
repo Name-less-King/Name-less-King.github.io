@@ -18,6 +18,6 @@ In my free time, I enjoy playing video games and listening to Rock, R&B, and Sou
 Research Interests
 ======
 For research, I am broadly interested in using probabilistic and statistical tools to solve practical problems. Several directions that I feel excited about include
-* Uncertainty Quantification (e.g. Conformal Prediction)
+* Uncertainty Quantification (e.g., Conformal Prediction)
 * Generative Modeling
 * Risk Management
