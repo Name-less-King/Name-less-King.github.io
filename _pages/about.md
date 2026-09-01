@@ -10,7 +10,7 @@ redirect_from:
 About Me
 ======
 I am currently a fourth-year Ph.D. student in [School of Data Science](https://sds.fudan.edu.cn), [Fudan University](https://www.fudan.edu.cn). Now I am under the supervision of 
-[Prof. L. Jeff Hong](https://jeffhongliu.github.io) and I collaborate closely with [Prof. Jiaye Teng](https://www.tengjiaye.com), [Prof. Hao Zeng](https://zenghao-stat.github.io) and [Prof. Nifei Lin](https://sime.sufe.edu.cn/lnf/main.htm).
+[Prof. L. Jeff Hong](https://jeffhongliu.github.io) and I collaborate closely with [Dr. Qingkai Zhang](https://scholars.cityu.edu.hk/en/persons/qzhang793/), [Prof. Nifei Lin](https://sime.sufe.edu.cn/lnf/main.htm), [Prof. Jiaye Teng](https://www.tengjiaye.com), and [Prof. Hao Zeng](https://zenghao-stat.github.io).
 
 In my free time, I enjoy playing video games and listening to Rock, R&B, and Soul music.
 
