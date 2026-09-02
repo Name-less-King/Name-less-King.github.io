@@ -1,10 +1,10 @@
 # main links links
 main:
   - title: "Publications"
-    url: /publications/?favicon=49513b7
+    url: /publications/?favicon=default
 
   - title: "Working Papers"
-    url: /workingpapers/?favicon=49513b7
+    url: /workingpapers/?favicon=default
 
   #- title: "Talks"
   #  url: /talks/    
