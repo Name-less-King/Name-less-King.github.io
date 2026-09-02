@@ -3,10 +3,8 @@
 <!-- start custom head snippets -->
 
 <!-- Site favicon -->
-<link rel="shortcut icon" type="image/x-icon" href="{{ base_path }}/images/site-icon-g.ico">
-<link rel="icon" type="image/svg+xml" href="{{ base_path }}/images/site-icon-g.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="{{ base_path }}/images/site-icon-g-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="{{ base_path }}/images/site-icon-g-16x16.png">
+{% assign favicon_page_key = page.url | default: '/' | slugify %}
+<link rel="icon" type="image/png" sizes="32x32" href="{{ base_path }}/images/tab-icon-g-20260902.png?page={{ favicon_page_key }}">
 <link rel="apple-touch-icon" sizes="180x180" href="{{ base_path }}/images/site-icon-g-180x180.png">
 <link rel="manifest" href="{{ base_path }}/images/site.webmanifest">
 <meta name="theme-color" content="#a7a8b2">
