@@ -2,27 +2,30 @@
 
 <!-- start custom head snippets -->
 
-<link rel="apple-touch-icon" sizes="180x180" href="{{ base_path }}/images/apple-touch-icon.png">
+<!-- Default favicon from Academic Pages -->
+<link rel="apple-touch-icon" sizes="180x180" href="{{ base_path }}/images/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/svg+xml" href="{{ base_path }}/images/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="{{ base_path }}/images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="{{ base_path }}/images/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="192x192" href="{{ base_path }}/images/favicon-192x192.png">
 <link rel="manifest" href="{{ base_path }}/images/manifest.json">
-<link rel="mask-icon" href="{{ base_path }}/images/safari-pinned-tab.svg" color="#b78a27">
-<link rel="shortcut icon" href="{{ base_path }}/images/favicon.ico">
-<meta name="msapplication-TileColor" content="#000000">
-<meta name="msapplication-TileImage" content="{{ base_path }}/images/mstile-144x144.png">
-<meta name="msapplication-config" content="{{ base_path }}/images/browserconfig.xml">
-<meta name="theme-color" content="#000000">
+<link rel="icon" href="{{ base_path }}/images/favicon.ico">
+<meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css"/>
 
-<script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
+{% if page.mathjax %}
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      processEscapes: true,
+      tags: 'all'
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
     }
-  });
+  };
 </script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+{% endif %}
 
 <!-- end custom head snippets -->

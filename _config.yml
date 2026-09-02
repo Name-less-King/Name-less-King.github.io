@@ -7,13 +7,14 @@
 
 # Site Settings
 locale                   : "en-US"
+site_theme               : "default"
 title                    : Zhiyang Liang
 title_separator          : "-"
 name                     : &name "Zhiyang Liang"
 description              : &description "School of Data Science, Fudan University"
 url                      : https://name-less-king.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "Name-less-King.github.io"
+repository               : "Name-less-King/Name-less-King.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
@@ -47,6 +48,7 @@ staticman:
       options:
         format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 atom_feed:
+  hide                   : false
   path                   : # blank (default) uses feed.xml
 
 # SEO Related
@@ -63,6 +65,7 @@ facebook:
   app_id                 :
   publisher              :
 og_image                 :  # Open Graph/Twitter default site image
+og_description           : "Zhiyang Liang's academic homepage and research profile"
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -73,7 +76,7 @@ social:
 
 # Analytics
 analytics:
-  provider               :  "google-universal" # false (default), "google", "google-universal", "custom"
+  provider               :  "false" # false (default), "google", "google-universal", "google-analytics-4", "custom"
   google:
     tracking_id          :
 
@@ -87,7 +90,7 @@ author:
   employer         :
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=t02BzFYAAAAJ&hl=en&authuser=1"
-  email            : "23110980010@m.fudan.edu.cn"
+  email            : "liangzy23@m.fudan.edu.cn"
   researchgate     :  
   uri              :
   bitbucket        :
@@ -127,6 +130,7 @@ exclude:
   - "*.sublime-workspace"
   - .asset-cache
   - .bundle
+  - .github
   - .jekyll-assets-cache
   - .sass-cache
   - CHANGELOG
@@ -140,10 +144,12 @@ exclude:
   - assets/js/plugins
   - assets/js/vendor
   - config
+  - Dockerfile
   - gulpfile.js
   - log
+  - local
   - node_modules
-  - package.json
+  - package.json*
   - tmp
   - vendor
 keep_files:
@@ -255,22 +261,24 @@ sass:
 permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
-timezone: America/Los_Angeles # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Asia/Shanghai # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins
 plugins:
+  - jekyll-feed
+  - jekyll-gist
   - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
   - jekyll-redirect-from
+  - jemoji
 # mimic GitHub Pages with --safe
 whitelist:
+  - jekyll-feed
+  - jekyll-gist
   - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
+  - jekyll-redirect-from
   - jemoji
 
 

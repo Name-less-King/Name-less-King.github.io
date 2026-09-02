@@ -1,2 +1,18 @@
+# Ignore generated site files and local caches
 _site/
+.sass-cache/
+.jekyll-cache/
+.DS_Store
 
+# Ignore local development files
+local/
+
+# Ignore generated dependency state
+Gemfile.lock
+node_modules/
+package-lock.json
+vendor/
+.bundle/
+
+# Ignore editor settings
+.vscode/

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <g fill="#000000">
-    <path d="M256 48 156 221 356 221z"/>
-    <path d="M156 221 56 394 256 394z"/>
-    <path d="M356 221 256 394 456 394z"/>
-  </g>
-</svg>
