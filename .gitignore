@@ -5,14 +5,14 @@ _site/
 .DS_Store
 
 # Ignore local development files
-local/
+/local/
 
 # Ignore generated dependency state
 Gemfile.lock
-node_modules/
+/node_modules/
 package-lock.json
-vendor/
-.bundle/
+/vendor/
+/.bundle/
 
 # Ignore editor settings
 .vscode/

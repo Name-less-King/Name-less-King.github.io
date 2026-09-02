@@ -6,16 +6,16 @@
 // Font Awesome core compile (Web Fonts-based)
 // -------------------------
 
-@import 'functions';
-@import 'variables';
-@import 'mixins';
-@import 'core';
-@import 'sizing';
-@import 'fixed-width';
-@import 'list';
-@import 'bordered-pulled';
-@import 'animated';
-@import 'rotated-flipped';
-@import 'stacked';
-@import 'icons';
-@import 'screen-reader';
+@import 'vendor/font-awesome/functions';
+@import 'vendor/font-awesome/variables';
+@import 'vendor/font-awesome/mixins';
+@import 'vendor/font-awesome/core';
+@import 'vendor/font-awesome/sizing';
+@import 'vendor/font-awesome/fixed-width';
+@import 'vendor/font-awesome/list';
+@import 'vendor/font-awesome/bordered-pulled';
+@import 'vendor/font-awesome/animated';
+@import 'vendor/font-awesome/rotated-flipped';
+@import 'vendor/font-awesome/stacked';
+@import 'vendor/font-awesome/icons';
+@import 'vendor/font-awesome/screen-reader';
