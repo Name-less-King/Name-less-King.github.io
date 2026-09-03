@@ -257,3 +257,24 @@ test("the shipped main bundle no longer contains the old two-state theme toggle"
   assert.doesNotMatch(bundle, /toggleTheme|determineThemeSetting|localStorage\.setItem\("theme"/);
   assert.match(bundle, /window\.siteTheme\.getComputedTheme\(\)/);
 });
+
+test("theme button styles prevent native click artifacts and keep keyboard focus visible", () => {
+  const navigation = fs.readFileSync(path.join(projectRoot, "_sass/layout/_navigation.scss"), "utf8");
+  const start = navigation.indexOf("    #theme-toggle {");
+  const styles = navigation.slice(start, navigation.indexOf("\n    a {", start));
+  const button = styles.slice(0, styles.indexOf("&:hover"));
+  assert.match(button, /-webkit-appearance:\s*none;/);
+  assert.match(button, /\bappearance:\s*none;/);
+  assert.match(button, /outline:\s*none;/);
+  assert.match(button, /overflow:\s*visible;/);
+  assert.match(button, /min-width:\s*1\.75rem;/);
+  assert.match(button, /line-height:\s*1;/);
+  assert.match(button, /-webkit-user-select:\s*none;/);
+  assert.match(button, /\buser-select:\s*none;/);
+  assert.match(button, /caret-color:\s*transparent;/);
+  assert.match(styles, /&:focus-visible\s*\{\s*outline:\s*2px solid var\(--global-link-color\);/);
+  const icon = styles.slice(styles.indexOf("#theme-icon {"));
+  assert.match(icon, /flex:\s*0 0 1\.25em;/);
+  assert.match(icon, /width:\s*1\.25em;/);
+  assert.match(icon, /pointer-events:\s*none;/);
+});

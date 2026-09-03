@@ -8,7 +8,7 @@
 # Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-asset_version            : "theme-system-1"
+asset_version            : "theme-button-2"
 title                    : Zhiyang Liang
 title_separator          : "-"
 name                     : &name "Zhiyang Liang"

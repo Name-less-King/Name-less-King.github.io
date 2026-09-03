@@ -227,20 +227,30 @@
 
     #theme-toggle {
       button {
+        /* Keep native button painting and text carets out of this icon control. */
+        -webkit-appearance: none;
+        appearance: none;
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 25px;
+        width: 1.75rem;
+        min-width: 1.75rem;
         height: 2.5rem;
         margin-left: 1rem;
         padding: 0;
         border: 0;
+        outline: none;
+        overflow: visible;
         background: transparent;
         color: var(--global-masthead-link-color);
         font: inherit;
+        line-height: 1;
         box-shadow: none;
         cursor: pointer;
+        -webkit-user-select: none;
+        user-select: none;
+        caret-color: transparent;
 
         &:hover {
           color: var(--global-masthead-link-color-hover);
@@ -250,6 +260,16 @@
           outline: 2px solid var(--global-link-color);
           outline-offset: 2px;
         }
+      }
+
+      #theme-icon {
+        /* All three glyphs share a non-shrinking, centered box. */
+        display: block;
+        flex: 0 0 1.25em;
+        width: 1.25em;
+        line-height: 1;
+        text-align: center;
+        pointer-events: none;
       }
     }
 
