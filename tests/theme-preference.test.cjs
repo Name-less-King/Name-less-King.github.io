@@ -240,7 +240,10 @@ test("legacy two-state choices do not override the new default System mode", () 
 test("all pages share a single accessible icon button and early theme initialization", () => {
   const head = fs.readFileSync(path.join(projectRoot, "_includes/head.html"), "utf8");
   const masthead = fs.readFileSync(path.join(projectRoot, "_includes/masthead.html"), "utf8");
+  const scripts = fs.readFileSync(path.join(projectRoot, "_includes/scripts.html"), "utf8");
   assert.ok(head.indexOf("{% include head/theme-preference.js %}") < head.indexOf("/assets/css/main.css"));
+  assert.ok(head.includes("/assets/css/main.css?v={{ site.asset_version }}"));
+  assert.ok(scripts.includes("/assets/js/main.min.js?v={{ site.asset_version }}"));
   assert.equal((masthead.match(/<button id="theme-cycle"/g) || []).length, 1);
   assert.match(masthead, /<button id="theme-cycle" type="button" aria-label="Color theme: System\. Switch to Light\."/);
   assert.doesNotMatch(masthead, /<select/);
