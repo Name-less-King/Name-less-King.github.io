@@ -150,6 +150,7 @@ exclude:
   - local
   - node_modules
   - package.json*
+  - tests
   - tmp
   - vendor
 keep_files:

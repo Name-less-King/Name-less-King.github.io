@@ -22,6 +22,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Set up Node.js for theme tests
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Test theme preferences
+        run: npm test
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Build with Jekyll

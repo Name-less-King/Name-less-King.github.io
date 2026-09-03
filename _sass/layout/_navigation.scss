@@ -189,7 +189,7 @@
     }
   }
 
-  button {
+  > button {
     position: absolute;
     height: 2.5rem;
     right: 0;
@@ -226,11 +226,30 @@
     }
 
     #theme-toggle {
-      a {
-        width: 25px;
+      button {
+        position: relative;
         display: flex;
+        align-items: center;
         justify-content: center;
+        width: 25px;
+        height: 2.5rem;
+        margin-left: 1rem;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        color: var(--global-masthead-link-color);
+        font: inherit;
+        box-shadow: none;
         cursor: pointer;
+
+        &:hover {
+          color: var(--global-masthead-link-color-hover);
+        }
+
+        &:focus-visible {
+          outline: 2px solid var(--global-link-color);
+          outline-offset: 2px;
+        }
       }
     }
 
