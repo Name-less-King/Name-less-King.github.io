@@ -172,6 +172,15 @@
    Priority plus navigation
    ========================================================================== */
 
+/* Three unchanged Font Awesome 7.2.0 glyphs; see the adjacent font license. */
+@font-face {
+  font-family: "Theme Toggle Icons";
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url("../webfonts/theme-toggle-icons.woff2") format("woff2");
+}
+
 .greedy-nav {
   position: relative;
   min-width: 250px;
@@ -267,16 +276,42 @@
         display: block;
         flex: 0 0 1.25em;
         width: 1.25em;
+        font-family: "Theme Toggle Icons";
+        font-size: 16px;
         line-height: 1;
         text-align: center;
         pointer-events: none;
 
         .theme-system-glyph {
           display: none;
-          /* Compensate for the 22/24 drawing area to match the sun glyph's height. */
-          width: 1.1em;
-          height: 1.1em;
+          position: relative;
+          width: 1em;
+          height: 1em;
           margin: 0 auto;
+
+          /* Match jianhaoma.github.io's font-based half-circle / half-sun geometry. */
+          &::before,
+          &::after {
+            position: absolute;
+            inset: 0;
+            top: -0.5px;
+            bottom: -0.5px;
+            text-align: center;
+            font: normal 900 1em/1 "Theme Toggle Icons";
+            color: currentColor;
+          }
+
+          &::before {
+            content: "\f111";
+            clip-path: polygon(0 0, calc(50% - 0.5px) 0, calc(50% - 0.5px) 100%, 0 100%);
+          }
+
+          &::after {
+            content: "\f185";
+            clip-path: polygon(calc(50% + 0.5px) 0, 100% 0, 100% 100%, calc(50% + 0.5px) 100%);
+            right: -1.5px;
+            transform: translateX(-1px);
+          }
         }
 
         &.theme-system .theme-system-glyph {

@@ -281,25 +281,43 @@ test("theme button styles prevent native click artifacts and keep keyboard focus
   assert.match(icon, /pointer-events:\s*none;/);
 });
 
-test("System uses a transparent half-sun SVG only in system mode", () => {
+test("System uses the reference site's font-based half-sun icon only in system mode", () => {
   const masthead = fs.readFileSync(path.join(projectRoot, "_includes/masthead.html"), "utf8");
   const navigation = fs.readFileSync(path.join(projectRoot, "_sass/layout/_navigation.scss"), "utf8");
   assert.match(masthead, /id="theme-icon" class="fa-solid theme-system" aria-hidden="true"/);
-  assert.match(masthead, /<svg class="theme-system-glyph"[^>]*viewBox="0 0 24 24"[^>]*fill="currentColor"[^>]*focusable="false"/);
-  assert.equal((masthead.match(/<svg class="theme-system-glyph"/g) || []).length, 1);
+  assert.equal((masthead.match(/<span class="theme-system-glyph fa-half-sun-moon"><\/span>/g) || []).length, 1);
+  assert.doesNotMatch(masthead, /<svg/);
   assert.match(navigation, /\.theme-system-glyph\s*\{\s*display:\s*none;/);
   assert.match(navigation, /&\.theme-system \.theme-system-glyph\s*\{\s*display:\s*block;/);
   assert.doesNotMatch(masthead + source, /fa-desktop/);
 });
 
-test("System icon compensates for SVG padding without changing the button size", () => {
-  const masthead = fs.readFileSync(path.join(projectRoot, "_includes/masthead.html"), "utf8");
+test("theme icons use the reference's 16px font and precise half-glyph geometry", () => {
   const navigation = fs.readFileSync(path.join(projectRoot, "_sass/layout/_navigation.scss"), "utf8");
+  const icon = navigation.slice(navigation.indexOf('#theme-icon {'), navigation.indexOf('.theme-system-glyph {'));
+  assert.match(icon, /font-family:\s*"Theme Toggle Icons";/);
+  assert.match(icon, /font-size:\s*16px;/);
   const glyph = navigation.match(/\.theme-system-glyph\s*\{([^}]+)\}/)[1];
-  assert.match(glyph, /width:\s*1\.1em;/);
-  assert.match(glyph, /height:\s*1\.1em;/);
+  assert.match(glyph, /width:\s*1em;/);
+  assert.match(glyph, /height:\s*1em;/);
   assert.match(glyph, /margin:\s*0 auto;/);
-  assert.match(masthead, /class="theme-system-glyph"[^>]*width="1\.1em" height="1\.1em"/);
-  // Existing sun: 516 font units at 512 units/em; SVG: 22 units in a 24-unit canvas.
-  assert.ok(Math.abs(1.1 * 22 / 24 - 516 / 512) < 0.001);
+  assert.match(glyph, /top:\s*-0\.5px;/);
+  assert.match(glyph, /bottom:\s*-0\.5px;/);
+  assert.ok(navigation.includes('content: "\\f111";'));
+  assert.ok(navigation.includes('content: "\\f185";'));
+  assert.ok(navigation.includes('clip-path: polygon(0 0, calc(50% - 0.5px) 0, calc(50% - 0.5px) 100%, 0 100%);'));
+  assert.ok(navigation.includes('clip-path: polygon(calc(50% + 0.5px) 0, 100% 0, 100% 100%, calc(50% + 0.5px) 100%);'));
+  assert.match(navigation, /right:\s*-1\.5px;\s*transform:\s*translateX\(-1px\);/);
+});
+
+test("the reference glyph subset is self-hosted and includes its font license", () => {
+  const font = fs.readFileSync(path.join(projectRoot, 'assets/webfonts/theme-toggle-icons.woff2'));
+  assert.equal(font.toString('ascii', 0, 4), 'wOF2');
+  assert.ok(font.length < 10000);
+  const license = fs.readFileSync(path.join(projectRoot, 'assets/webfonts/theme-toggle-icons-LICENSE.txt'), 'utf8');
+  assert.match(license, /SIL OPEN FONT LICENSE/);
+  assert.match(license, /Font Awesome Free 7\.2\.0/);
+  const navigation = fs.readFileSync(path.join(projectRoot, '_sass/layout/_navigation.scss'), 'utf8');
+  assert.match(navigation, /@font-face\s*\{\s*font-family:\s*"Theme Toggle Icons";/);
+  assert.ok(navigation.includes('url("../webfonts/theme-toggle-icons.woff2")'));
 });
