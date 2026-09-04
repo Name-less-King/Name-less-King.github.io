@@ -273,8 +273,9 @@
 
         .theme-system-glyph {
           display: none;
-          width: 1em;
-          height: 1em;
+          /* Compensate for the 22/24 drawing area to match the sun glyph's height. */
+          width: 1.1em;
+          height: 1.1em;
           margin: 0 auto;
         }
 

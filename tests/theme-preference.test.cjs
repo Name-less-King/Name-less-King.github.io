@@ -291,3 +291,15 @@ test("System uses a transparent half-sun SVG only in system mode", () => {
   assert.match(navigation, /&\.theme-system \.theme-system-glyph\s*\{\s*display:\s*block;/);
   assert.doesNotMatch(masthead + source, /fa-desktop/);
 });
+
+test("System icon compensates for SVG padding without changing the button size", () => {
+  const masthead = fs.readFileSync(path.join(projectRoot, "_includes/masthead.html"), "utf8");
+  const navigation = fs.readFileSync(path.join(projectRoot, "_sass/layout/_navigation.scss"), "utf8");
+  const glyph = navigation.match(/\.theme-system-glyph\s*\{([^}]+)\}/)[1];
+  assert.match(glyph, /width:\s*1\.1em;/);
+  assert.match(glyph, /height:\s*1\.1em;/);
+  assert.match(glyph, /margin:\s*0 auto;/);
+  assert.match(masthead, /class="theme-system-glyph"[^>]*width="1\.1em" height="1\.1em"/);
+  // Existing sun: 516 font units at 512 units/em; SVG: 22 units in a 24-unit canvas.
+  assert.ok(Math.abs(1.1 * 22 / 24 - 516 / 512) < 0.001);
+});
