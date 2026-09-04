@@ -270,6 +270,17 @@
         line-height: 1;
         text-align: center;
         pointer-events: none;
+
+        .theme-system-glyph {
+          display: none;
+          width: 1em;
+          height: 1em;
+          margin: 0 auto;
+        }
+
+        &.theme-system .theme-system-glyph {
+          display: block;
+        }
       }
     }
 

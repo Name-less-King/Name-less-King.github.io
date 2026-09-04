@@ -5,7 +5,7 @@
   /* A new key avoids carrying the old two-state toggle's override into System mode. */
   const storageKey = "theme-preference";
   const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
-  const icons = { system: "fa-desktop", light: "fa-sun", dark: "fa-moon" };
+  const icons = { system: "theme-system", light: "fa-sun", dark: "fa-moon" };
   const labels = { system: "System", light: "Light", dark: "Dark" };
   const nextPreference = { system: "light", light: "dark", dark: "system" };
 
@@ -46,7 +46,7 @@
 
     const icon = document.getElementById("theme-icon");
     if (icon) {
-      icon.classList.remove("fa-desktop", "fa-sun", "fa-moon");
+      icon.classList.remove("theme-system", "fa-sun", "fa-moon");
       icon.classList.add(icons[preference]);
     }
   }

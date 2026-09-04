@@ -39,7 +39,7 @@ function createBrowser(options = {}) {
     ...eventTarget(),
     setAttribute: (key, value) => buttonAttributes.set(key, value)
   };
-  const iconClasses = new Set(["fa-solid", "fa-desktop"]);
+  const iconClasses = new Set(["fa-solid", "theme-system"]);
   const icon = {
     classList: {
       add: (...classes) => classes.forEach((value) => iconClasses.add(value)),
@@ -113,7 +113,7 @@ for (const dark of [false, true]) {
       assert.equal(browser.root.style.colorScheme, browser.theme());
       browser.ready();
       assert.equal(browser.buttonAttributes.get("title"), "Color theme: System. Switch to Light.");
-      assert.ok(browser.iconClasses.has("fa-desktop"));
+      assert.ok(browser.iconClasses.has("theme-system"));
       browser.changeSystem(!dark);
       assert.equal(browser.theme(), dark ? "light" : "dark");
       assert.equal(browser.preference(), "system");
@@ -145,6 +145,8 @@ test("one button cycles System, Light, Dark and back to live System mode", () =>
     assert.equal(browser.preference(), value);
     assert.equal(browser.theme(), value === "system" ? "dark" : value);
     assert.equal(browser.root.style.colorScheme, browser.theme());
+    const expectedIcon = { system: "theme-system", light: "fa-sun", dark: "fa-moon" }[value];
+    assert.deepEqual([...browser.iconClasses].sort(), ["fa-solid", expectedIcon].sort());
     const label = browser.buttonAttributes.get("aria-label");
     assert.equal(label, browser.buttonAttributes.get("title"));
     assert.match(label, new RegExp("Color theme: " + value, "i"));
@@ -152,7 +154,7 @@ test("one button cycles System, Light, Dark and back to live System mode", () =>
   browser.changeSystem(false);
   assert.equal(browser.theme(), "light");
   assert.equal(browser.preference(), "system");
-  assert.ok(browser.iconClasses.has("fa-desktop"));
+  assert.ok(browser.iconClasses.has("theme-system"));
   assert.equal(browser.iconClasses.size, 2);
 });
 
@@ -277,4 +279,15 @@ test("theme button styles prevent native click artifacts and keep keyboard focus
   assert.match(icon, /flex:\s*0 0 1\.25em;/);
   assert.match(icon, /width:\s*1\.25em;/);
   assert.match(icon, /pointer-events:\s*none;/);
+});
+
+test("System uses a transparent half-sun SVG only in system mode", () => {
+  const masthead = fs.readFileSync(path.join(projectRoot, "_includes/masthead.html"), "utf8");
+  const navigation = fs.readFileSync(path.join(projectRoot, "_sass/layout/_navigation.scss"), "utf8");
+  assert.match(masthead, /id="theme-icon" class="fa-solid theme-system" aria-hidden="true"/);
+  assert.match(masthead, /<svg class="theme-system-glyph"[^>]*viewBox="0 0 24 24"[^>]*fill="currentColor"[^>]*focusable="false"/);
+  assert.equal((masthead.match(/<svg class="theme-system-glyph"/g) || []).length, 1);
+  assert.match(navigation, /\.theme-system-glyph\s*\{\s*display:\s*none;/);
+  assert.match(navigation, /&\.theme-system \.theme-system-glyph\s*\{\s*display:\s*block;/);
+  assert.doesNotMatch(masthead + source, /fa-desktop/);
 });
